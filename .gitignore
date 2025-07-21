@@ -1,0 +1,28 @@
+# Dépendances Node
+node_modules/
+
+# Fichiers de build React
+client/build/
+client/node_modules/ # Si tu as un node_modules dans client aussi
+
+# Fichiers de build Node.js
+server/node_modules/ # Si tu as un node_modules dans server aussi
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dossiers Docker spécifiques à l'OS (Windows, Mac)
+.docker/
+.DS_Store
+Thumbs.db
+
+# Images Docker construites (souvent des dossiers ou fichiers temporaires)
+*.dockerimage

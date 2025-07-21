@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules 
+    environment:
+      - REACT_APP_SPOTIFY_CLIENT_ID=${SPOTIFY_CLIENT_ID}
+      - REACT_APP_SPOTIFY_REDIRECT_URI=${SPOTIFY_REDIRECT_URI}
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app 
+      - /app/server/node_modules 
+    env_file:
+      - ./.env 
