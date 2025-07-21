@@ -1,0 +1,58 @@
+:root {
+  --color-dark-bg: #1A1A1A; 
+  --color-medium-dark-bg: #2B2B2B; 
+  --color-light-text: #F0F0F0; 
+  --color-blue-accent: #6A7EEF; 
+  --color-light-blue-accent: #AAB7FF; 
+  --color-button-default-bg: #F3F4F6; 
+  --color-button-default-text: #2B2B2B; 
+  --color-button-success-bg: #6EE7B7; 
+  --color-button-success-text: #2B2B2B; 
+  --color-button-danger-bg: #FF7D99; 
+  --color-button-danger-text: #F0F0F0; 
+  --color-button-border: #D1D5DB; 
+  --font-family-primary: 'Unageo', sans-serif; 
+  --font-size-h1: 3em;
+  --font-size-logo: 4em;
+  --font-size-button: 1.2em;
+  --font-size-normal: 1em;
+  --font-size-small: 0.9em; 
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-dark-bg); 
+  color: var(--color-light-text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh;
+  padding-top: 50px; 
+  box-sizing: border-box; 
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px; 
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+@font-face {
+  font-family: 'Unageo'; 
+  src: url('./fonts/Unageo.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal;
+  font-display: swap; 
+}
+
+:root {
+  --font-family-primary: 'Unageo', sans-serif;
+}

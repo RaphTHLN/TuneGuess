@@ -1,0 +1,17 @@
+# Utilise une image Node.js comme base
+FROM node:20-alpine
+
+# Définis le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copie package.json et package-lock.json pour installer les dépendances
+COPY package*.json ./
+
+# Installe les dépendances du frontend
+RUN npm install --silent
+
+# Copie le reste du code de l'application
+COPY . .
+
+# Lance l'application React
+CMD ["npm", "start"]
